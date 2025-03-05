@@ -1,16 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
+function adicionarTarefa(){
+    let mensagem = "Tarefa adicionada com sucesso!";  
+    let inputTarefa = document.getElementById("inputTarefa");
+    let tarefa = inputTarefa.value;
+    document.getElementById("mensagem").textContent = mensagem;
+    let listaTarefas = document.getElementById("listaTarefas")
+    let novaTarefa= document.createElement("li");
 
+    novaTarefa.textContent = tarefa;
+    listaTarefas.appendChild(novaTarefa)
 
-const tela = document.querySelector('#tela');
-const contexto = tela.getContext('2d');
-
-
-tela.width = 700;
-tela.height = 500;
-
-contexto.beginPath();
-contexto.moveTo(10,10);
-contexto.lineTo(350,250);
-contexto.stroke();
-
-})
+inputTarefa.value = "";
+}

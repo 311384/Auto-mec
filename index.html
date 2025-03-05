@@ -2,74 +2,19 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Mecânica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Aula JS</title>
     <link rel="stylesheet" href="./index/index.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>Auto</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero hero-background">
-            <div class="hero-content">
-                <h2>Sua melhor opção em serviços automotivos</h2>
-                <p>Mecânicos especializados para cuidar do seu veículo</p>
-                <a href="agendamento.html"><button class="cta-button">Agende um serviço</button></a>
-            </div>
-        </section>
-
-        <section id="servicos" class="services">
-            <h2>Nossos Serviços</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="./images/Ferramentas.jpg" alt="Manutenção">
-                    <h3>Manutenção Preventiva</h3>
-                    <p>Mantenha seu carro sempre em dia</p>
-                </div>
-
-
-                <div class="service-card">
-                    <img src="./images/manutencao-preventiva.jpg" alt="Reparo">
-                    <h3>Reparos Gerais</h3>
-                    <p>Consertos e reparos especializados</p>
-                </div>
-                <div class="service-card">
-                    <img src="./images/diagnostico.jpg" alt="Diagnóstico">
-                    <h3>Diagnóstico</h3>
-                    <p>Análise completa do seu veículo</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="contact-info">
-                <h3>Contato</h3>
-                <p>Telefone: (66) xxxxxx-xxxx</p>
-                <p>Email: nil7626@gmail.com</p>
-                <p>Endereço: Rua Example, 123</p>
-            </div>
-            <div class="social-media">
-                <h3>Redes Sociais</h3>
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">WhatsApp</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="./index/index.js"></script>   
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <p>Adicione suas Tarefas!</p> 
+        <input type="text" placeholder="Digite sua tarefa" id="inputTarefa">      
+        <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+        <p id="mensagem"></p>
+        <ul id="listaTarefas"></ul>
+    </div>
+  <script src="./Scripty/scrypt.js"></script>  
 </body>
 </html>
