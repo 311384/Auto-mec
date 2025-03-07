@@ -25,12 +25,23 @@ inputTarefa.value = "";
 function renderizarTarefas() {
     const listaTarefas = document.getElementById("listaTarefas")
     listaTarefas.innerHTML=""
-            let i =0
-        for (i; i < tarefas.length; i++){
+            
+        for (let i= 0; i < tarefas.length; i++){
             let novaTarefa= document.createElement("li")
             novaTarefa.textContent = tarefas[i]
+
+            let botaoRemover = document.createElement("botton")
+            botaoRemover.className = "remover"
+            novaTarefa.appendChild(botaoRemover)
+            botaoRemover.textContent = "Remover"
+            botaoRemover.onclick = () => removerTarefa (i)
+
             listaTarefas.appendChild(novaTarefa)
          }
+        }
+        function removerTarefa(i) {
+            tarefas.splice(i, 1)
+            removerTarefa()
         }
 
     
