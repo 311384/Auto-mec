@@ -35,13 +35,33 @@ function renderizarTarefas() {
             botaoRemover.textContent = "Remover"
             botaoRemover.onclick = () => removerTarefa (i)
 
+            let botaoEditar =document.createElement("button")
+            botaoEditar.className = "editar"            
+            botaoEditar.textContent = "Editar"
+            botaoEditar.onclick = () => editarTarefa (i)
+
             novaTarefa.appendChild(botaoRemover)
+            novaTarefa.appendChild(botaoEditar)
             listaTarefas.appendChild(novaTarefa)
          }
         }
         function removerTarefa(i) {
             tarefas.splice(i, 1)
             renderizarTarefas()
+        }
+        function editarTarefa(i) {
+           let tarefaEditada = prompt("Edite a tarefa:")
+           if (tarefaEditada.trim() !== "") {
+            tarefas[i] = tarefaEditada
+            renderizarTarefas()
+           }
+        }
+        function limparLista() {
+            tarefas.length = 0
+            renderizarTarefas()
+            const mensagem = document.getElementById("mensagem")
+            mensagem.textContent = "Lista de tarefas limpa com sucesso!"
+            mensagem.style.color = '#28a745'; // Reset message color
         }
 
     
