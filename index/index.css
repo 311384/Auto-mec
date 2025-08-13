@@ -1,5 +1,5 @@
 body {
-  padding: 768; /* Este valor está incorreto, veja a observação abaixo */
+  padding: 50px; /* Este valor está incorreto, veja a observação abaixo */
   font-family: Arial, sans-serif;
   display: flex; /* Mantém o Flexbox */
   flex-direction: column; /* Novo: Empilha os elementos em uma coluna */
