@@ -1,12 +1,12 @@
 body {
-  padding: 50px; /* Este valor está incorreto, veja a observação abaixo */
   font-family: Arial, sans-serif;
   display: flex; /* Mantém o Flexbox */
-  flex-direction: column; /* Novo: Empilha os elementos em uma coluna */
-  justify-content: center; /* Mantém o alinhamento central */
-  align-items: center; /* Mantém o alinhamento central */
+  flex-direction: column; /* Empilha os elementos em uma coluna */
+  justify-content: flex-start; /* **Altera para alinhar o conteúdo no topo** */
+  align-items: center; /* Mantém a centralização horizontal */
   height: 100vh;
   margin: 0;
+  padding-top: 50px; /* **Adiciona o espaçamento do topo aqui (pode ajustar o valor)** */
   background-color: #331f19;
 }
 .container {
